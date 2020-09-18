@@ -2,7 +2,7 @@
 
 [![GitHub stars](https://img.shields.io/github/stars/codejamninja/generator-nestjs-prisma.svg?style=social&label=Stars)](https://github.com/codejamninja/generator-nestjs-prisma)
 
-> yeoman generator for typescript node modules
+> yeoman generator for nestjs prisma
 
 Please ★ this repo if you found it useful ★ ★ ★
 
