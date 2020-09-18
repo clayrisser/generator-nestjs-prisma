@@ -1,0 +1,71 @@
+{
+  "name": "generator-nestjs-prisma",
+  "version": "0.0.1",
+  "description": "yeoman generator for nestjs prisma",
+  "keywords": [
+    "yeoman-generator",
+    "generator",
+    "yo",
+    "yeoman",
+    "nestjs",
+    "prisma",
+    "orm",
+    "api",
+    "graphql"
+  ],
+  "main": "generators/app/index.js",
+  "files": [
+    "generators"
+  ],
+  "scripts": {
+    "build": "npm run test && babel src -d generators/app",
+    "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
+    "clean:purge": "git clean -fXd",
+    "format": "prettier --write ./**/*.{json,md,js}",
+    "link": "npm link && npm link generator-node-module-typescript",
+    "lint": "npm run format && eslint ./",
+    "lint:fix": "npm run format && eslint --fix ./",
+    "prepublish": "npm run build",
+    "start": "rimraf demo && npm run lint && npm run build && yo --destination=demo node-module-typescript",
+    "test": "npm run lint",
+    "unlink": "npm unlink generator-node-module-typescript"
+  },
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "execa": "^4.0.3",
+    "generator-github-project": "^0.2.11",
+    "idempotent-babel-polyfill": "^7.4.4",
+    "lodash": "^4.17.15",
+    "map-series-async": "^0.0.1",
+    "prettier": "^2.0.5",
+    "which": "^2.0.2",
+    "yeoman-generator": "^4.9.0",
+    "yo-base-prompts": "^0.1.8",
+    "yo-option-or-prompt": "^0.2.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/node": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.9.0",
+    "@babel/preset-env": "^7.9.6",
+    "@types/which": "^1.3.2",
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-jam": "^0.2.20",
+    "yo": "^3.1.1"
+  },
+  "author": {
+    "name": "Jam Risser",
+    "email": "jam@codejam.ninja",
+    "url": "https://codejam.ninja"
+  },
+  "homepage": "https://github.com/codejamninja/generator-node-module-typescript",
+  "license": "MIT",
+  "repository": "https://github.com/codejamninja/generator-node-module-typescript",
+  "eslintIgnore": [
+    "generators",
+    "demo"
+  ]
+}
