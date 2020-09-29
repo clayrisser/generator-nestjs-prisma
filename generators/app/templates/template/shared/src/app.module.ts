@@ -14,7 +14,7 @@ import {
   // TypeGraphqlAuthGuard,
   // TypeGraphqlResourceGuard
 } from 'nestjs-keycloak';
-import { PrismaService, PrismaModule } from '~/modules/prisma';
+import { PrismaService } from '~/modules/prisma';
 import modules from './modules';
 import { GraphqlCtx } from './types';
 
@@ -24,7 +24,6 @@ const RedisStore = ConnectRedis(session);
 @Module({
   imports: [
     ConfigModule.forRoot({ isGlobal: true }),
-    PrismaModule,
     KeycloakModule.registerAsync({
       inject: [ConfigService],
       useFactory: (config: ConfigService) => ({
