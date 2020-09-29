@@ -74,7 +74,7 @@ typings/
 
 # application
 .tern-port
-/dist
+/lib
 package-lock.json
 yarn.lock
 tsconfig.tsbuildinfo

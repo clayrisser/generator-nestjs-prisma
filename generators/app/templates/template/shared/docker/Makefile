@@ -9,5 +9,17 @@ include docker.mk
 postgres:
 	@docker-compose up $(ARGS) postgres
 
+.PHONY: keycloak
+keycloak:
+	@docker-compose up $(ARGS) keycloak
+
+.PHONY: redis
+redis:
+	@docker-compose up $(ARGS) redis
+
+.PHONY: deps
+deps:
+	@docker-compose up $(ARGS) deps
+
 %:
 	@

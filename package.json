@@ -1,6 +1,6 @@
 {
   "name": "generator-nestjs-prisma",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "yeoman generator for nestjs prisma",
   "keywords": [
     "yeoman-generator",
@@ -22,13 +22,13 @@
     "clean": "git clean -fXd -e \\!node_modules -e \\!node_modules/**/*",
     "clean:purge": "git clean -fXd",
     "format": "prettier --write ./**/*.{json,md,js}",
-    "link": "npm link && npm link generator-node-module-typescript",
+    "link": "npm link && npm link generator-nestjs-prisma",
     "lint": "npm run format && eslint ./",
     "lint:fix": "npm run format && eslint --fix ./",
     "prepublish": "npm run build",
-    "start": "rimraf demo && npm run lint && npm run build && yo --destination=demo node-module-typescript",
+    "start": "rimraf demo && npm run lint && npm run build && yo --destination=demo nestjs-prisma",
     "test": "npm run lint",
-    "unlink": "npm unlink generator-node-module-typescript"
+    "unlink": "npm unlink generator-nestjs-prisma"
   },
   "dependencies": {
     "@babel/cli": "^7.8.4",
@@ -61,9 +61,9 @@
     "email": "jam@codejam.ninja",
     "url": "https://codejam.ninja"
   },
-  "homepage": "https://github.com/codejamninja/generator-node-module-typescript",
+  "homepage": "https://github.com/codejamninja/generator-nestjs-prisma",
   "license": "MIT",
-  "repository": "https://github.com/codejamninja/generator-node-module-typescript",
+  "repository": "https://github.com/codejamninja/generator-nestjs-prisma",
   "eslintIgnore": [
     "generators",
     "demo"

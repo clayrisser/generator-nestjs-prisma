@@ -14,12 +14,16 @@ export default async function writing(yo) {
     yo.destinationPath('docker'),
     yo.context
   );
-  if (!yo.context.lock) {
-    yo.fs.copy(
-      yo.templatePath('template/shared/_npmrc'),
-      yo.destinationPath('.npmrc')
-    );
-  }
+  yo.fs.copyTpl(
+    yo.templatePath('template/shared/tests'),
+    yo.destinationPath('tests'),
+    yo.context
+  );
+  yo.fs.copyTpl(
+    yo.templatePath('template/shared/_package.json'),
+    yo.destinationPath('package.json'),
+    yo.context
+  );
   yo.fs.copy(
     yo.templatePath('template/shared/_eslintrc'),
     yo.destinationPath('.eslintrc')
@@ -36,31 +40,38 @@ export default async function writing(yo) {
     yo.templatePath('template/shared/_cspellrc'),
     yo.destinationPath('.cspellrc')
   );
-  yo.fs.copyTpl(
-    yo.templatePath('template/shared/_gitignore'),
-    yo.destinationPath('.gitignore'),
-    yo.context
-  );
-  yo.fs.copyTpl(
-    yo.templatePath('template/shared/_package.json'),
-    yo.destinationPath('package.json'),
-    yo.context
-  );
   yo.fs.copy(
-    yo.templatePath('template/shared/_prettierrc'),
-    yo.destinationPath('.prettierrc')
+    yo.templatePath('template/shared/_gitignore'),
+    yo.destinationPath('.gitignore')
   );
   yo.fs.copy(
     yo.templatePath('template/shared/tsconfig.json'),
     yo.destinationPath('tsconfig.json')
   );
-  yo.fs.copyTpl(
-    yo.templatePath('template/shared/tests'),
-    yo.destinationPath('tests'),
-    yo.context
+  yo.fs.copy(
+    yo.templatePath('template/shared/tsconfig.build.json'),
+    yo.destinationPath('tsconfig.build.json')
   );
   yo.fs.copy(
-    yo.templatePath('template/shared/tests_eslintrc'),
-    yo.destinationPath('tests/.eslintrc')
+    yo.templatePath('template/shared/silicon.mk'),
+    yo.destinationPath('silicon.mk')
   );
+  yo.fs.copy(
+    yo.templatePath('template/shared/_graphqlconfig'),
+    yo.destinationPath('.graphqlconfig')
+  );
+  yo.fs.copy(
+    yo.templatePath('template/shared/example.env'),
+    yo.destinationPath('example.env')
+  );
+  yo.fs.copy(
+    yo.templatePath('template/shared/_dockerignore'),
+    yo.destinationPath('.dockerignore')
+  );
+  if (!yo.context.lock) {
+    yo.fs.copy(
+      yo.templatePath('template/shared/_npmrc'),
+      yo.destinationPath('.npmrc')
+    );
+  }
 }
