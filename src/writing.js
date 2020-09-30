@@ -19,6 +19,10 @@ export default async function writing(yo) {
     yo.destinationPath('tests'),
     yo.context
   );
+  yo.fs.copy(
+    yo.templatePath('template/shared/views/**'),
+    yo.destinationPath('views')
+  );
   yo.fs.copyTpl(
     yo.templatePath('template/shared/_package.json'),
     yo.destinationPath('package.json'),
