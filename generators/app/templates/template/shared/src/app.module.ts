@@ -14,7 +14,7 @@ import {
   // TypeGraphqlAuthGuard,
   // TypeGraphqlResourceGuard
 } from 'nestjs-keycloak';
-import { PrismaService } from '~/modules/prisma';
+import { PrismaModule, PrismaService } from '~/modules/prisma';
 import modules from './modules';
 import { GraphqlCtx } from './types';
 
