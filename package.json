@@ -1,6 +1,6 @@
 {
   "name": "generator-nestjs-prisma",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "yeoman generator for nestjs prisma",
   "keywords": [
     "yeoman-generator",
