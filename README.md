@@ -4,6 +4,8 @@
 
 > yeoman generator for nestjs prisma
 
+![](assets/generator-nestjs-prisma.png)
+
 Please ★ this repo if you found it useful ★ ★ ★
 
 ## Features
